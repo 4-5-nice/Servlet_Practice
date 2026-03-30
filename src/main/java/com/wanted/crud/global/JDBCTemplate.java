@@ -41,7 +41,7 @@ public class JDBCTemplate {
         return con;
     }
 
-    public static void close(Connection con) {
+    public static void close(PreparedStatement pstmt, Connection con) {
         try {
             if (con != null && !con.isClosed()) {
                 con.close();

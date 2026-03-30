@@ -4,136 +4,136 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class EmployeeDetailDTO {
-    private String EMP_ID;
-    private String EMP_NAME;
-    private String EMAIL;
-    private String PHONE;
-    private String DEPT_CODE;
-    private String DEPT_TITLE;
-    private String JOB_CODE;
-    private String JOB_NAME;
-    private Integer SALARY;
-    private String HIRE_DATE;
-    private String ENT_YN;
+    private String empId;
+    private String name;
+    private String email;
+    private String phone;
+    private String dept_code;
+    private String dept_title;
+    private String job_code;
+    private String job_name;
+    private Integer salary;
+    private String hire_date;
+    private String ent_yn;
 
     public EmployeeDetailDTO() {}
 
-    public EmployeeDetailDTO(String EMP_ID, String EMP_NAME, String EMAIL, String PHONE, String DEPT_CODE, String DEPT_TITLE, String JOB_CODE, String JOB_NAME, Integer SALARY, String HIRE_DATE, String ENT_YN) {
-        this.EMP_ID = EMP_ID;
-        this.EMP_NAME = EMP_NAME;
-        this.EMAIL = EMAIL;
-        this.PHONE = PHONE;
-        this.DEPT_CODE = DEPT_CODE;
-        this.DEPT_TITLE = DEPT_TITLE;
-        this.JOB_CODE = JOB_CODE;
-        this.JOB_NAME = JOB_NAME;
-        this.SALARY = SALARY;
-        this.HIRE_DATE = HIRE_DATE;
-        this.ENT_YN = ENT_YN;
+    public EmployeeDetailDTO(String empId, String name, String email, String phone, String dept_code, String dept_title, String job_code, String job_name, Integer salary, String hire_date, String ent_yn) {
+        this.empId = empId;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.dept_code = dept_code;
+        this.dept_title = dept_title;
+        this.job_code = job_code;
+        this.job_name = job_name;
+        this.salary = salary;
+        this.hire_date = hire_date;
+        this.ent_yn = ent_yn;
     }
 
-    public String getEMP_ID() {
-        return EMP_ID;
+    public String getEmpId() {
+        return empId;
     }
 
-    public void setEMP_ID(String EMP_ID) {
-        this.EMP_ID = EMP_ID;
+    public void setEmpId(String empId) {
+        this.empId = empId;
     }
 
-    public String getEMP_NAME() {
-        return EMP_NAME;
+    public String getName() {
+        return name;
     }
 
-    public void setEMP_NAME(String EMP_NAME) {
-        this.EMP_NAME = EMP_NAME;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEMAIL() {
-        return EMAIL;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEMAIL(String EMAIL) {
-        this.EMAIL = EMAIL;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPHONE() {
-        return PHONE;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPHONE(String PHONE) {
-        this.PHONE = PHONE;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getDEPT_CODE() {
-        return DEPT_CODE;
+    public String getDept_code() {
+        return dept_code;
     }
 
-    public void setDEPT_CODE(String DEPT_CODE) {
-        this.DEPT_CODE = DEPT_CODE;
+    public void setDept_code(String dept_code) {
+        this.dept_code = dept_code;
     }
 
-    public String getDEPT_TITLE() {
-        return DEPT_TITLE;
+    public String getDept_title() {
+        return dept_title;
     }
 
-    public void setDEPT_TITLE(String DEPT_TITLE) {
-        this.DEPT_TITLE = DEPT_TITLE;
+    public void setDept_title(String dept_title) {
+        this.dept_title = dept_title;
     }
 
-    public String getJOB_CODE() {
-        return JOB_CODE;
+    public String getJob_code() {
+        return job_code;
     }
 
-    public void setJOB_CODE(String JOB_CODE) {
-        this.JOB_CODE = JOB_CODE;
+    public void setJob_code(String job_code) {
+        this.job_code = job_code;
     }
 
-    public String getJOB_NAME() {
-        return JOB_NAME;
+    public String getJob_name() {
+        return job_name;
     }
 
-    public void setJOB_NAME(String JOB_NAME) {
-        this.JOB_NAME = JOB_NAME;
+    public void setJob_name(String job_name) {
+        this.job_name = job_name;
     }
 
-    public Integer getSALARY() {
-        return SALARY;
+    public Integer getSalary() {
+        return salary;
     }
 
-    public void setSALARY(Integer SALARY) {
-        this.SALARY = SALARY;
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 
-    public String getHIRE_DATE() {
-        return HIRE_DATE;
+    public String getHire_date() {
+        return hire_date;
     }
 
-    public void setHIRE_DATE(String HIRE_DATE) {
-        this.HIRE_DATE = HIRE_DATE;
+    public void setHire_date(String hire_date) {
+        this.hire_date = hire_date;
     }
 
-    public String getENT_YN() {
-        return ENT_YN;
+    public String getEnt_yn() {
+        return ent_yn;
     }
 
-    public void setENT_YN(String ENT_YN) {
-        this.ENT_YN = ENT_YN;
+    public void setEnt_yn(String ent_yn) {
+        this.ent_yn = ent_yn;
     }
 
     @Override
     public String toString() {
         return "EmployeeDetailDTO{" +
-                "EMP_ID='" + EMP_ID + '\'' +
-                ", EMP_NAME='" + EMP_NAME + '\'' +
-                ", EMAIL='" + EMAIL + '\'' +
-                ", PHONE='" + PHONE + '\'' +
-                ", DEPT_CODE='" + DEPT_CODE + '\'' +
-                ", DEPT_TITLE='" + DEPT_TITLE + '\'' +
-                ", JOB_CODE='" + JOB_CODE + '\'' +
-                ", JOB_NAME='" + JOB_NAME + '\'' +
-                ", SALARY=" + SALARY +
-                ", HIRE_DATE=" + HIRE_DATE +
-                ", ENT_YN='" + ENT_YN + '\'' +
+                "empId='" + empId + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", dept_code='" + dept_code + '\'' +
+                ", dept_title='" + dept_title + '\'' +
+                ", job_code='" + job_code + '\'' +
+                ", job_name='" + job_name + '\'' +
+                ", salary=" + salary +
+                ", hire_date='" + hire_date + '\'' +
+                ", ent_yn='" + ent_yn + '\'' +
                 '}';
     }
 }

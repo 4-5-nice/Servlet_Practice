@@ -124,8 +124,7 @@
         </div>
         <div class="content">
             <form action="${pageContext.request.contextPath}/employees/detail" method="get" class="search-form">
-                <input type="number" name="empId" placeholder="사원 번호를 입력하세요" required
-                       value="${param.empId}">
+                <input type="number" name="empId" placeholder="사원 번호를 입력하세요" required>
                 <button type="submit">조회</button>
             </form>
         </div>
@@ -177,7 +176,7 @@
                         </tr>
                         <tr>
                             <th>입사일</th>
-                            <td>${detailDTO.hire_Date}</td>
+                            <td>${detailDTO.hire_date}</td>
                         </tr>
                         <tr>
                             <th>퇴직여부</th>

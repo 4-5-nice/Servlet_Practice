@@ -13,6 +13,7 @@ public class EmployeeDetailService {
     private Connection connection;
 
     public EmployeeDetailDTO findMemberByempId(String empId) {
+
         Connection con = null;
         try{
             con = JDBCTemplate.getConnection();

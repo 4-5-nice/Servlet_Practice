@@ -24,14 +24,21 @@ public class EmployeeDetailServlet extends HttpServlet {
         HttpSession session = req.getSession(false); // 기존 세션이 없으면 null 반환
 
         String empId = null;
-
+        EmployeeDetailDTO detailDTO = null;
         if(session != null) {
             empId = req.getParameter("empId");
-        }
-        EmployeeDetailDTO detailDTO = detailService.findMemberByempId(empId);
 
-        // jsp 에서 사용하는 값 담아주기
-        req.setAttribute("detailDTO", detailDTO != null ? detailDTO : "사원 번호 조회 안됨!!!");
+            if(empId != null && !empId.isEmpty()) {
+                detailDTO = detailService.findMemberByempId(empId);
+
+                if (detailDTO == null) {
+                    resp.sendRedirect(req.getContextPath() + "/view/common/detailErrorpage.jsp");
+                    return;
+                }
+            }
+        }
+
+        req.setAttribute("detailDTO", detailDTO);
 
         RequestDispatcher rd = req.getRequestDispatcher("/view/employee/detail.jsp");
         rd.forward(req, resp);

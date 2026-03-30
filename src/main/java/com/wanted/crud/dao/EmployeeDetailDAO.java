@@ -51,7 +51,7 @@ public class EmployeeDetailDAO {
                 rs.getString("DEPT_TITLE"),
                 rs.getString("JOB_CODE"),
                 rs.getString("JOB_NAME"),
-                rs.getInt("SLARY"),
+                rs.getInt("SALARY"),
                 rs.getString("HIRE_DATE"),
                 rs.getString("ENT_YN")
         );

@@ -8,9 +8,27 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>💾사원 등록💾</title>
 </head>
 <body>
 
+    <form action="/employees" method="post">
+
+        <label>🔢사원번호</label>
+        <input type="text" name ="empId">
+
+        <label>📛사원명</label>
+        <input type="text" name = "empName">
+
+        <label>📧이메일</label>
+        <input type="text" name = "email">
+
+        <label>☎️전화번호</label>
+        <input type="text" name = "phone">
+
+        <label>⛓️‍💥부서코드</label>
+        <input type="text" name = "deptCode">
+
+    </form>
 </body>
 </html>

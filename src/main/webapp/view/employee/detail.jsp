@@ -183,6 +183,17 @@
                             <td>${detailDTO.ent_yn}</td>
                         </tr>
                     </table>
+
+                    <form action="${pageContext.request.contextPath}/employees/delete" method="post"
+                          onsubmit="return confirm('정말 삭제하시겠습니까?');"
+                          style="margin-top: 20px;">
+                        <input type="hidden" name="empId" value="${detailDTO.empId}">
+                        <button type="submit"
+                                style="padding: 12px 20px; background-color: #e74a3b; color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer;">
+                            회원 삭제
+                        </button>
+                    </form>
+
                 </c:when>
 
                 <c:when test="${not empty message}">

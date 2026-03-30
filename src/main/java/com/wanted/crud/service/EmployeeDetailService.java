@@ -7,10 +7,7 @@ import com.wanted.crud.global.JDBCTemplate;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class EmployeeDetailService {
-
-    private EmployeeDetailDAO detailDAO;
-    private Connection connection;
+public class EmployeeDetailService { ;
 
     public EmployeeDetailDTO findMemberByempId(String empId) {
 

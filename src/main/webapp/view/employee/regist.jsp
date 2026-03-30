@@ -29,6 +29,20 @@
         <label>⛓️‍💥부서코드</label>
         <input type="text" name = "deptCode">
 
+        <label>💼직급코드</label>
+        <input type="text" name="jobCode">
+
+        <label>💰급여</label>
+        <input type="number" name="salary">
+
+        <label>📅입사일</label>
+        <input type="date" name="hireDate">
+
+        <label>🚪퇴직여부</label>
+        <input type="text" name="entYn">
+
+        <button type="submit">등록</button>
+
     </form>
 </body>
 </html>

@@ -52,7 +52,21 @@ public class EmployeeRegistServlet extends HttpServlet {
         dto.setPhone(req.getParameter("phone"));
         dto.setDeptCode(req.getParameter("deptCode"));
         dto.setJobCode(req.getParameter("jobCode"));
-        dto.setSalary(Integer.parseInt(req.getParameter("salary")));
+
+        /* comment.
+            salary 변수는 int 방식이다. 하지만 웹에서 보내는 데이터는 String 이다.
+            따라서 빈 문자열 또는 공백만 있는 경우를 걸러내기 위해서 아래와 같이 따로
+            수정을 했다.
+         */
+
+        String salaryParam = req.getParameter("salary");
+        if (salaryParam == null || salaryParam.isBlank()) {
+            // 만약 salary 가 비어있다면 등록 페이지로 돌려보낸다.
+            resp.sendRedirect(req.getContextPath() + "/employees/new");
+            return;
+        } else {
+            dto.setSalary(Integer.parseInt(salaryParam));
+        }
         dto.setHireDate(req.getParameter("hireDate"));
         dto.setEntYn(req.getParameter("entYn"));
 

@@ -12,7 +12,10 @@
 </head>
 <body>
 
-    <form action="/employees" method="post">
+<%
+String contextPath = request.getContextPath();
+%>
+<form action="<%= contextPath %>/employees" method="post">
 
         <label>🔢사원번호</label>
         <input type="text" name ="empId">
@@ -33,7 +36,7 @@
         <input type="text" name="jobCode">
 
         <label>💰급여</label>
-        <input type="number" name="salary">
+        <input type="number" name="salary" required>
 
         <label>📅입사일</label>
         <input type="date" name="hireDate">

@@ -15,13 +15,16 @@
 <%
 String contextPath = request.getContextPath();
 %>
-<form action="<%= contextPath %>/employees" method="post">
+<form action="<%= contextPath %>/employees/new" method="post">
 
         <label>🔢사원번호</label>
         <input type="text" name ="empId">
 
         <label>📛사원명</label>
         <input type="text" name = "empName">
+
+        <label>🪪주민번호(EMP_NO)</label>
+        <input type="text" name="empNo" placeholder="예: 900101-1234567" required>
 
         <label>📧이메일</label>
         <input type="text" name = "email">

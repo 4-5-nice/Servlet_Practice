@@ -18,8 +18,8 @@ public class EmployeeRegistDAO {
 
     public void employeeRegist(EmployeeRegistDTO dto) {
         // SQL 쿼리문 (사원번호, 사원명, 이메일, 전화번호, 부서코드, 직급코드, 급여, 입사일, 퇴직여부)
-        String sql = "INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, EMAIL, PHONE, DEPT_CODE, JOB_CODE, SALARY, HIRE_DATE, ENT_YN)" +
-        " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, EMP_NO, EMAIL, PHONE, DEPT_CODE, JOB_CODE, SAL_LEVEL, SALARY, HIRE_DATE, ENT_YN)" +
+        " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         // INSERT 는 ResultSet이 필요없음
         Connection conn = null;
@@ -30,17 +30,25 @@ public class EmployeeRegistDAO {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, dto.getEmpId());
             pstmt.setString(2, dto.getEmpName());
-            pstmt.setString(3, dto.getEmail());
-            pstmt.setString(4, dto.getPhone());
-            pstmt.setString(5, dto.getDeptCode());
-            pstmt.setString(6, dto.getJobCode());
-            pstmt.setInt(7, dto.getSalary());
-            pstmt.setString(8, dto.getHireDate());
-            pstmt.setString(9, dto.getEntYn());
+            pstmt.setString(3, dto.getEmpNo());
+            pstmt.setString(4, dto.getEmail());
+            pstmt.setString(5, dto.getPhone());
+            pstmt.setString(6, dto.getDeptCode());
+            pstmt.setString(7, dto.getJobCode());
+            pstmt.setString(8, "S1");
+            pstmt.setInt(9, dto.getSalary());
+            pstmt.setString(10, dto.getHireDate());
+            pstmt.setString(11, dto.getEntYn());
 
             // 쿼리를 실행하는 코드
-            pstmt.executeUpdate();
+            int result = pstmt.executeUpdate();
 
+            if(result > 0) {
+                conn.commit(); // ⭐ 여기서 성공 시 커밋!
+                System.out.println("DB 등록 성공 및 커밋 완료!");
+            } else {
+                conn.rollback(); // 실패 시 되돌리기
+            }
         } catch (Exception e) {
             System.out.println("선택한 것을 조회할 수 없습니다!!" + e.getMessage());
         } finally {

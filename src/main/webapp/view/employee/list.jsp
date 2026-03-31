@@ -137,7 +137,7 @@
                         <td>${emp.empId}</td>
 
                         <td>
-                            <a href="/employee/detail?empId=${emp.empId}" class="name-link">
+                            <a href="${pageContext.request.contextPath}/employees/detail?empId=${emp.empId}" class="name-link">
                                     ${emp.empName}
                             </a>
                         </td>
@@ -156,8 +156,8 @@
                         </td>
 
                         <td>
-                            <a href="/employee/detail?empId=${emp.empId}" class="btn btn-detail">상세</a>
-                            <a href="/employee/update?empId=${emp.empId}" class="btn btn-update">수정</a>
+                            <a href="${pageContext.request.contextPath}/employees/detail?empId=${emp.empId}" class="btn btn-detail">상세</a>
+                            <a href="${pageContext.request.contextPath}/employees/edit?empId=${emp.empId}" class="btn btn-update">수정</a>
                         </td>
                     </tr>
                 </c:forEach>

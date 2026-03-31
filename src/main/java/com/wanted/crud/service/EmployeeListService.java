@@ -15,7 +15,7 @@ public class EmployeeListService {
 
         Connection con = JDBCTemplate.getConnection();
         List<EmployeeListDTO> resultList = employeeListDAO.empSelect(con);
-        JDBCTemplate.close(con);
+//        JDBCTemplate.close(con);
 
         return resultList;
     }

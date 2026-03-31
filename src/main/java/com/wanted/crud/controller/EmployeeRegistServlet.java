@@ -17,7 +17,7 @@ import java.io.IOException;
  *  POST /employees : 등록 처리 후 목록으로 redirect
  */
 
-@WebServlet(urlPatterns = {"/employees/new", "/employees"})
+@WebServlet(urlPatterns = {"/employees/new"})
 public class EmployeeRegistServlet extends HttpServlet {
 
     private EmployeeRegistService service = new EmployeeRegistService();
@@ -48,6 +48,7 @@ public class EmployeeRegistServlet extends HttpServlet {
         EmployeeRegistDTO dto = new EmployeeRegistDTO();
         dto.setEmpId(req.getParameter("empId"));
         dto.setEmpName(req.getParameter("empName"));
+        dto.setEmpNo(req.getParameter("empNo"));
         dto.setEmail(req.getParameter("email"));
         dto.setPhone(req.getParameter("phone"));
         dto.setDeptCode(req.getParameter("deptCode"));

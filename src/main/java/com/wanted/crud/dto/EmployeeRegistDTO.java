@@ -4,6 +4,7 @@ public class EmployeeRegistDTO {
 
     private String empId;
     private String empName;
+    private String empNo;
     private String email;
     private String phone;
     private String deptCode;
@@ -26,6 +27,14 @@ public class EmployeeRegistDTO {
 
     public void setEmpName(String empName) {
         this.empName = empName;
+    }
+
+    public String getEmpNo() {
+        return empNo;
+    }
+
+    public void setEmpNo(String empNo) {
+        this.empNo = empNo;
     }
 
     public String getEmail() {

@@ -214,7 +214,8 @@
         function movePage(url, needLogin) {
             const isLogin = <%= isLogin %>;
 
-            if (needLogin && !isLogin) {
+            // if (needLogin && !isLogin) {
+            if(false){
                 alert("로그인 후 이용 가능한 기능입니다.");
                 return;
             }

@@ -29,8 +29,7 @@ public class LoginDAO {
         }
 
         JDBCTemplate.close(rset);
-        JDBCTemplate.close(pstmt);
-        JDBCTemplate.close(con);
+        JDBCTemplate.close(pstmt, con);
 
         return foundId;
     }

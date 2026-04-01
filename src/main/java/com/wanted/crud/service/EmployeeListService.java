@@ -5,6 +5,7 @@ import com.wanted.crud.dto.EmployeeListDTO;
 import com.wanted.crud.global.JDBCTemplate;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 public class EmployeeListService {
@@ -15,8 +16,12 @@ public class EmployeeListService {
 
         Connection con = JDBCTemplate.getConnection();
         List<EmployeeListDTO> resultList = employeeListDAO.empSelect(con);
-        JDBCTemplate.close(con);
 
+        try {
+            con.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return resultList;
     }
 }
